@@ -12,6 +12,7 @@ class DoctorImageAndText extends StatelessWidget {
       children: [
         SvgPicture.asset(ImageAsset.svgsBackgroundLogo),
         Container(
+            alignment: Alignment.center,
             foregroundDecoration: BoxDecoration(
                 gradient: LinearGradient(
               colors: [
@@ -22,14 +23,17 @@ class DoctorImageAndText extends StatelessWidget {
               end: Alignment.topCenter,
               stops: const [0.14, 0.4],
             )),
-            child: Image.asset(ImageAsset.imagesDoctorImage,)),
-        const Positioned(
-            bottom: 35,
+            child: Image.asset(
+              ImageAsset.imagesDoctorImage,
+              fit: BoxFit.scaleDown,
+            )),
+        Positioned(
+            bottom: 25,
             right: 0,
             left: 0,
             child: Text(
               "Best Doctor Appointment App",
-              style: TextStyles.textStyleSize32BoldBlue,
+              style: TextStyles.textStyleSize32BoldBlue.copyWith(height: 1.1),
               textAlign: TextAlign.center,
             )),
       ],
