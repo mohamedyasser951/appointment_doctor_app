@@ -1,4 +1,4 @@
-import 'package:appointment_app/core/constants/text_styles.dart';
+import 'package:appointment_app/core/theme/text_styles.dart';
 import 'package:appointment_app/feature/onBoardingPage/widget/docdoc_logo_text.dart';
 import 'package:appointment_app/feature/onBoardingPage/widget/doctor_image_and_text.dart';
 import 'package:appointment_app/feature/onBoardingPage/widget/get_start_button.dart';
@@ -25,13 +25,13 @@ class OnBoardingPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   spacing: 10.h,
-                  children: const [
+                  children: [
                     Text(
                       'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
-                      style: TextStyles.textStylesize14Weight400grey,
+                      style: TextStyles.font14RegularGrey,
                       textAlign: TextAlign.center,
                     ),
-                    GetStartButton(),
+                    const GetStartButton(),
                   ],
                 ),
               ),

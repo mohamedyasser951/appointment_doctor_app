@@ -921,6 +921,30 @@
             ]
         },
         {
+            "outputFile": "com.example.appointment_app-merged_res-26:/values-v31_values-v31.arsc.flat",
+            "map": [
+                {
+                    "source": "D:\\Flutter Projects\\appointment_doctor_app\\android\\app\\src\\main\\res\\values-v31\\styles.xml",
+                    "from": {
+                        "startLines": "3,-1",
+                        "startColumns": "4,-1",
+                        "startOffsets": "173,-1",
+                        "endLines": "10,-1",
+                        "endColumns": "12,-1",
+                        "endOffsets": "703,-1"
+                    },
+                    "to": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,590",
+                        "endLines": "9,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "585,754"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\moham\\.gradle\\daemon\\8.3\\com.example.appointment_app-merged_res-26:\\values-ky_values-ky.arsc.flat",
             "map": [
                 {
