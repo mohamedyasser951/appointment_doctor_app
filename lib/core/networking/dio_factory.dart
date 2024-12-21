@@ -4,7 +4,7 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 class DioFactory {
   DioFactory._();
   static Dio? dio;
-  Dio getDio() {
+  static Dio getDio() {
     const Duration timeout = Duration(seconds: 30);
     if (dio == null) {
       dio = Dio();
@@ -16,7 +16,7 @@ class DioFactory {
     return dio!;
   }
 
-  void addDioInterceptor() {
+  static void addDioInterceptor() {
     dio!.interceptors.add(PrettyDioLogger(
       requestHeader: true,
       requestBody: true,

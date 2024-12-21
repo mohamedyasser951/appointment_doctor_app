@@ -1,27 +1,17 @@
 import 'package:appointment_app/core/SahredWidgets/custom_button.dart';
-import 'package:appointment_app/core/SahredWidgets/custome_text_field.dart';
 import 'package:appointment_app/core/helpers/spacing.dart';
 import 'package:appointment_app/core/theme/text_styles.dart';
 import 'package:appointment_app/feature/Login/UI/widgets/already_have_account.dart';
+import 'package:appointment_app/feature/Login/UI/widgets/email_and_password.dart';
+import 'package:appointment_app/feature/Login/UI/widgets/login_bloc_listener.dart';
 import 'package:appointment_app/feature/Login/UI/widgets/term_and_conditions.dart';
+import 'package:appointment_app/feature/Login/logic/LoginCubit/login_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginPage extends StatefulWidget {
+class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
-
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  bool isVisible = false;
-  @override
-  void dispose() {
-    _formKey.currentState?.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,32 +33,9 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyles.font14RegularGrey,
                 ),
                 verticalSpace(35),
-                Form(
-                    key: _formKey,
-                    child: Column(
-                      children: [
-                        CustomeTextField(
-                            controller: TextEditingController(),
-                            hintText: "Email"),
-                        verticalSpace(10),
-                        CustomeTextField(
-                          controller: TextEditingController(),
-                          hintText: "Password",
-                          isPassword: true,
-                          obSecureText: isVisible,
-                          suffixIcon: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                isVisible = !isVisible;
-                              });
-                            },
-                            child: Icon(isVisible
-                                ? Icons.visibility_off
-                                : Icons.visibility),
-                          ),
-                        ),
-                      ],
-                    )),
+                const EmailAndPassword(),
+                verticalSpace(20),
+                const LoginBlocListener(),
                 verticalSpace(6),
                 Align(
                   alignment: AlignmentDirectional.centerEnd,
@@ -77,11 +44,12 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyles.font14RegularBlue,
                   ),
                 ),
-                verticalSpace(40),
-                CustomeButton(text: "Login", onPressed: () {}),
-                verticalSpace(30),
+                verticalSpace(10),
+                CustomeButton(
+                    text: "Login", onPressed: () => validateAndLogin(context)),
+                verticalSpace(10),
                 const TermAndConditionsWidget(),
-                verticalSpace(50),
+                verticalSpace(30),
                 const Center(child: AlreadyHaveAccountWidget())
               ],
             ),
@@ -89,5 +57,11 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  void validateAndLogin(BuildContext context) {
+    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+      context.read<LoginCubit>().emitLoadingStates();
+    }
   }
 }

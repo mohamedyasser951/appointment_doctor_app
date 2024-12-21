@@ -8,27 +8,36 @@ class CustomeTextField extends StatelessWidget {
   final bool isPassword;
   final Widget? suffixIcon;
   final bool? obSecureText;
-  const CustomeTextField({
-    super.key,
-    required this.controller,
-    required this.hintText,
-    this.isPassword = false,
-    this.suffixIcon,
-    this.obSecureText,
-  });
+  final String? Function(String?)? validator;
+  const CustomeTextField(
+      {super.key,
+      required this.controller,
+      required this.hintText,
+      this.isPassword = false,
+      this.suffixIcon,
+      this.obSecureText,
+      required this.validator});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      autovalidateMode: AutovalidateMode.always,
       obscureText: obSecureText ?? false,
-      autocorrect: !isPassword,
+      // autocorrect: !isPassword,
       controller: controller,
+      validator: validator,
       decoration: InputDecoration(
         enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(color: ColorManger.lightGreyColor),
             borderRadius: BorderRadius.circular(12)),
         focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(color: ColorManger.primaryColor),
+            borderRadius: BorderRadius.circular(12)),
+        errorBorder: OutlineInputBorder(
+            borderSide: const BorderSide(color: Colors.red),
+            borderRadius: BorderRadius.circular(12)),
+        focusedErrorBorder: OutlineInputBorder(
+            borderSide: const BorderSide(color: Colors.red),
             borderRadius: BorderRadius.circular(12)),
         hintText: hintText,
         filled: true,
