@@ -1,5 +1,7 @@
 import 'package:appointment_app/core/networking/api_service.dart';
 import 'package:appointment_app/core/networking/dio_factory.dart';
+import 'package:appointment_app/feature/Home/Data/Api/home_api_service.dart';
+import 'package:appointment_app/feature/Home/Data/repository/home_repo.dart';
 import 'package:appointment_app/feature/Login/Data/repository/login_repo.dart';
 import 'package:appointment_app/feature/Login/logic/LoginCubit/login_cubit.dart';
 import 'package:dio/dio.dart';
@@ -15,4 +17,9 @@ void setupGetIt() async {
   //Login Feature
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(apiService: getIt()));
   getIt.registerFactory<LoginCubit>(() => LoginCubit(loginRepo: getIt()));
+
+  //Home Feature
+  getIt.registerLazySingleton<HomeApiService>(() => HomeApiService(dio));
+  getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(apiService: getIt()));
+  
 }

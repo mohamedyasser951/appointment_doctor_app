@@ -2,6 +2,14 @@
 class ImageAsset {
   ImageAsset._();
   
+  /// Assets for imagesBlueContainerBakground
+  /// assets/images/blue_container_bakground.png
+  static const String imagesBlueContainerBakground = "assets/images/blue_container_bakground.png";
+
+  /// Assets for imagesBlueContainerDoctor
+  /// assets/images/blue_container_doctor.png
+  static const String imagesBlueContainerDoctor = "assets/images/blue_container_doctor.png";
+
   /// Assets for imagesDoctorImage
   /// assets/images/doctor_image.png
   static const String imagesDoctorImage = "assets/images/doctor_image.png";
@@ -21,14 +29,6 @@ class ImageAsset {
   /// Assets for svgsBackgroundLogo
   /// assets/svgs/background_logo.svg
   static const String svgsBackgroundLogo = "assets/svgs/background_logo.svg";
-
-  /// Assets for svgsBlueBackgroud
-  /// assets/svgs/blue_backgroud.svg
-  static const String svgsBlueBackgroud = "assets/svgs/blue_backgroud.svg";
-
-  /// Assets for svgsBlueContainerDoctor
-  /// assets/svgs/blue_container_doctor.svg
-  static const String svgsBlueContainerDoctor = "assets/svgs/blue_container_doctor.svg";
 
   /// Assets for svgsDocdocLogo
   /// assets/svgs/docdoc_logo.svg

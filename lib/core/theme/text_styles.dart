@@ -19,6 +19,9 @@ class TextStyles {
       color: ColorManger.darkBlue,
       fontWeight: FontWeightHelper.bold);
 
+  static TextStyle font18BoldWhite = TextStyle(
+      fontSize: 18.sp, color: Colors.white, fontWeight: FontWeightHelper.bold);
+
   static TextStyle font14RegularGrey = TextStyle(
       fontSize: 14.sp,
       color: ColorManger.greyColor,
