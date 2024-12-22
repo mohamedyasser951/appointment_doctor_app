@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class SpecializationList extends StatelessWidget {
   final List<SpecializationsData?>? specializationDataList;
   const SpecializationList({super.key, required this.specializationDataList});
-
+     
   @override
   Widget build(BuildContext context) {
     return SizedBox(
