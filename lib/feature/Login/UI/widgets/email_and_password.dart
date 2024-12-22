@@ -38,7 +38,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
 
   @override
   void dispose() {
-    context.read<LoginCubit>().passwordController.dispose();
+    // context.read<LoginCubit>().passwordController.dispose();
     super.dispose();
   }
 

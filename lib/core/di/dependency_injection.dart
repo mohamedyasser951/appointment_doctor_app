@@ -11,8 +11,8 @@ void setupGetIt() async {
   Dio dio = DioFactory.getDio();
 
   getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
-  
+
   //Login Feature
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(apiService: getIt()));
-  getIt.registerLazySingleton<LoginCubit>(() => LoginCubit(loginRepo: getIt()));
+  getIt.registerFactory<LoginCubit>(() => LoginCubit(loginRepo: getIt()));
 }

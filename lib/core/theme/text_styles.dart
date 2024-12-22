@@ -9,13 +9,23 @@ class TextStyles {
       color: ColorManger.primaryColor,
       fontWeight: FontWeightHelper.bold);
 
+  static TextStyle font14RegularBlue = TextStyle(
+      fontSize: 14.sp,
+      color: ColorManger.primaryColor,
+      fontWeight: FontWeightHelper.regular);
+
+  static TextStyle font18BoldDarkBlue = TextStyle(
+      fontSize: 18.sp,
+      color: ColorManger.darkBlue,
+      fontWeight: FontWeightHelper.bold);
+
   static TextStyle font14RegularGrey = TextStyle(
       fontSize: 14.sp,
       color: ColorManger.greyColor,
       fontWeight: FontWeightHelper.regular);
 
-  static TextStyle font14RegularBlue = TextStyle(
-      fontSize: 14.sp,
-      color: ColorManger.primaryColor,
+  static TextStyle font11RegularMoreGrey = TextStyle(
+      fontSize: 11.sp,
+      color: ColorManger.moreGreyColor,
       fontWeight: FontWeightHelper.regular);
 }
