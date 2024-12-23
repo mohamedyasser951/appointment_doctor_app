@@ -1,1 +1,0 @@
- D:\\Flutter\ Projects\\appointment_doctor_app\\.dart_tool\\flutter_build\\b1aaf6c2eda64d32554471da6dc7233d\\native_assets.yaml: 

@@ -321,9 +321,9 @@
     },
     {
       "name": "js",
-      "rootUri": "file:///C:/Users/moham/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.7.1",
+      "rootUri": "file:///C:/Users/moham/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "2.19"
     },
     {
       "name": "json_annotation",
@@ -644,7 +644,7 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-12-21T18:05:26.952751Z",
+  "generated": "2024-12-23T00:12:39.045436Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///C:/development/flutter_sdk",

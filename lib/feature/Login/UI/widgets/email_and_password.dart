@@ -52,7 +52,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             controller: context.read<LoginCubit>().emailController,
             hintText: "Email",
             validator: (value) {
-              if (value!.isEmpty || AppRegex.isEmailValid(value)) {
+              if (value!.isEmpty ) {
                 return "Please enter Valid email";
               }
               return null;
@@ -62,9 +62,9 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
           CustomeTextField(
             controller: context.read<LoginCubit>().passwordController,
             validator: (value) {
-              if (value!.isEmpty || !AppRegex.isPasswordValid(value)) {
-                return "Please enter Valid password";
-              }
+              // if (value!.isEmpty || !AppRegex.isPasswordValid(value)) {
+              //   return "Please enter Valid password";
+              // }
               return null;
             },
             hintText: "Password",

@@ -3,9 +3,9 @@ import 'package:appointment_app/feature/Home/UI/widgets/Doctors/doctors_item.dar
 import 'package:flutter/material.dart';
 
 class DoctorsBuilder extends StatelessWidget {
-  final List<DoctorsSpecialization>? doctors;
+  final List<Doctors>? doctors;
 
-  const DoctorsBuilder({super.key,required this.doctors});
+  const DoctorsBuilder({super.key, required this.doctors});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,9 @@ class DoctorsBuilder extends StatelessWidget {
       child: ListView.builder(
           itemCount: doctors!.length,
           itemBuilder: (context, index) {
-            return  DoctorsItem(doctorsSpecialization: doctors![index],);
+            return DoctorsItem(
+              doctor: doctors![index],
+            );
           }),
     );
   }

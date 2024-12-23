@@ -7,10 +7,10 @@ import 'package:appointment_app/core/theme/text_styles.dart';
 import 'package:appointment_app/feature/Home/Data/models/specializations_response_model.dart';
 
 class DoctorsItem extends StatelessWidget {
-  final DoctorsSpecialization doctorsSpecialization;
+  final Doctors doctor;
   const DoctorsItem({
     super.key,
-    required this.doctorsSpecialization,
+    required this.doctor,
   });
 
   @override
@@ -26,6 +26,11 @@ class DoctorsItem extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 color: ColorManger.primaryColor),
+            // child: const Image(
+            //   image:
+            //       NetworkImage(""),
+            //   fit: BoxFit.cover,
+            // ),
           ),
           horizontalSpace(8.0),
           Expanded(
@@ -33,19 +38,19 @@ class DoctorsItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  doctorsSpecialization.name ?? 'Name',
+                  doctor.name ?? 'Name',
                   style: TextStyles.font18BoldDarkBlue,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                 ),
                 verticalSpace(6),
                 Text(
-                  "${doctorsSpecialization.degree} || ${doctorsSpecialization.phone}",
+                  "${doctor.degree} || ${doctor.phone}",
                   style: TextStyles.font14RegularBlue,
                 ),
                 verticalSpace(6),
                 Text(
-                  doctorsSpecialization.email ?? "Email",
+                  doctor.email ?? "Email",
                   style: TextStyles.font14RegularGrey,
                 ),
               ],

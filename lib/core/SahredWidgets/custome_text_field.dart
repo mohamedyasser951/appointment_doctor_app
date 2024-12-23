@@ -21,7 +21,7 @@ class CustomeTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      autovalidateMode: AutovalidateMode.always,
+      // autovalidateMode: AutovalidateMode.always,
       obscureText: obSecureText ?? false,
       // autocorrect: !isPassword,
       controller: controller,

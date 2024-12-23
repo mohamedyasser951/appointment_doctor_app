@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: unused_element
-
 part of 'specializations_response_model.dart';
 
 // **************************************************************************
@@ -29,8 +27,7 @@ SpecializationsData _$SpecializationsDataFromJson(Map<String, dynamic> json) =>
       id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       doctors: (json['doctors'] as List<dynamic>?)
-          ?.map(
-              (e) => DoctorsSpecialization.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => Doctors.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -42,9 +39,7 @@ Map<String, dynamic> _$SpecializationsDataToJson(
       'doctors': instance.doctors,
     };
 
-DoctorsSpecialization _$DoctorsSpecializationFromJson(
-        Map<String, dynamic> json) =>
-    DoctorsSpecialization(
+Doctors _$DoctorsFromJson(Map<String, dynamic> json) => Doctors(
       id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
       email: json['email'] as String?,
@@ -62,9 +57,7 @@ DoctorsSpecialization _$DoctorsSpecializationFromJson(
       endTime: json['endTime'] as String?,
     );
 
-Map<String, dynamic> _$DoctorsSpecializationToJson(
-        DoctorsSpecialization instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$DoctorsToJson(Doctors instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'email': instance.email,

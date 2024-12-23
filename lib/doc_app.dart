@@ -1,3 +1,4 @@
+import 'package:appointment_app/core/constants/app_strings_constants.dart';
 import 'package:appointment_app/core/routing/app_route.dart';
 import 'package:appointment_app/core/routing/route.dart';
 import 'package:appointment_app/core/theme/colors.dart';
@@ -18,7 +19,10 @@ class DocApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
         ),
         onGenerateRoute: AppRoute.onGenerateRoute,
-        initialRoute: AppRouteName.homePage,
+        initialRoute: AppStringConstants.userLogedIn
+            ? AppRouteName.homePage
+            : AppRouteName.loginPage,
+        // initialRoute: AppRouteName.homePage,
       ),
     );
   }

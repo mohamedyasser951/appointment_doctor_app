@@ -1,4 +1,7 @@
+import 'package:appointment_app/core/constants/app_strings_constants.dart';
 import 'package:appointment_app/core/helpers/extensions.dart';
+import 'package:appointment_app/core/helpers/storage_helper.dart';
+import 'package:appointment_app/core/networking/dio_factory.dart';
 import 'package:appointment_app/core/routing/route.dart';
 import 'package:appointment_app/core/theme/colors.dart';
 import 'package:appointment_app/feature/Login/logic/LoginCubit/login_cubit.dart';
@@ -22,7 +25,8 @@ class LoginBlocListener extends StatelessWidget {
             context: context,
             builder: (context) => const Center(
               child: CircularProgressIndicator.adaptive(
-                valueColor: AlwaysStoppedAnimation<Color>(ColorManger.primaryColor),
+                valueColor:
+                    AlwaysStoppedAnimation<Color>(ColorManger.primaryColor),
               ),
             ),
           );
@@ -34,11 +38,17 @@ class LoginBlocListener extends StatelessWidget {
             ),
           );
         } else if (state is SuccessLoginState) {
+          saveUserToken(state.loginResponse.userData!.token);
           context.pop();
           context.pushNamedAndRemoveUntil(AppRouteName.homePage);
         }
       },
       child: const SizedBox.shrink(),
     );
+  }
+
+  void saveUserToken(String token) async {
+      await StorageHelper.setSecuredString(AppStringConstants.userToken, token);
+      DioFactory.sendTokenAfterUserLogin(token);
   }
 }
