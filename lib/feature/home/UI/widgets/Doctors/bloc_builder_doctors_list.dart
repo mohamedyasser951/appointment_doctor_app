@@ -18,12 +18,14 @@ class BlocBuilderDoctorsList extends StatelessWidget {
             return DoctorsBuilder(doctors: doctors);
           },
           doctorsError: (error) {
-            return Center(
-              child: Text(error),
+            return SliverToBoxAdapter(
+              child: Center(
+                child: Text(error),
+              ),
             );
           },
           orElse: () {
-            return const SizedBox.shrink();
+            return SliverToBoxAdapter(child: const SizedBox.shrink());
           },
         );
       },

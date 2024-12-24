@@ -6,12 +6,14 @@ class SeeAllSpecialization extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text("Doctor Speciality", style: TextStyles.font18BoldDarkBlue),
-        Text("See all", style: TextStyles.font14RegularBlue),
-      ],
+    return SliverToBoxAdapter(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text("Doctor Speciality", style: TextStyles.font18BoldDarkBlue),
+          Text("See all", style: TextStyles.font14RegularBlue),
+        ],
+      ),
     );
   }
 }

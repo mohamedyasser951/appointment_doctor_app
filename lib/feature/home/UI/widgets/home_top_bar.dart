@@ -9,25 +9,32 @@ class HomeTopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Hi, Mohamed!",
-              style: TextStyles.font18BoldDarkBlue,
-            ),
-            Text("How Are you Today?", style: TextStyles.font11RegularMoreGrey),
-          ],
-        ),
+    return SliverAppBar(
+      backgroundColor: Colors.white,
+      pinned: true,
+      actions: [
         CircleAvatar(
           backgroundColor: ColorManger.lightGreyColor,
           radius: 24,
           child: SvgPicture.asset(ImageAsset.svgsAlert),
         )
       ],
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Hi, Mohamed!",
+                style: TextStyles.font18BoldDarkBlue,
+              ),
+              Text("How Are you Today?",
+                  style: TextStyles.font11RegularMoreGrey),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

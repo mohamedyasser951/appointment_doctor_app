@@ -1,6 +1,6 @@
+import 'package:appointment_app/core/constants/image_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:appointment_app/core/helpers/spacing.dart';
 import 'package:appointment_app/core/theme/colors.dart';
 import 'package:appointment_app/core/theme/text_styles.dart';
@@ -16,7 +16,7 @@ class DoctorsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.only(bottom: 8.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,12 +25,12 @@ class DoctorsItem extends StatelessWidget {
             width: 110.w,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
+                image: const DecorationImage(
+                    image: AssetImage(
+                      ImageAsset.imagesDoctorsDoctor1,
+                    ),
+                    fit: BoxFit.cover),
                 color: ColorManger.primaryColor),
-            // child: const Image(
-            //   image:
-            //       NetworkImage(""),
-            //   fit: BoxFit.cover,
-            // ),
           ),
           horizontalSpace(8.0),
           Expanded(

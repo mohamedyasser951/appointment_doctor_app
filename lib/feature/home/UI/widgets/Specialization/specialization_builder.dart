@@ -16,26 +16,28 @@ class _SpecializationListState extends State<SpecializationList> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 100,
-      child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: widget.specializationDataList!.length,
-          itemBuilder: (context, index) {
-            return GestureDetector(
-              onTap: () {
-                selectedIndex = index;
-                setState(() {});
-                context.read<HomeCubit>().emitDoctorsList(
-                    widget.specializationDataList![index]!.id!);
-              },
-              child: SpecializationItem(
-                specializationsData: widget.specializationDataList![index]!,
-                itemInex: index,
-                selectedIndex: selectedIndex,
-              ),
-            );
-          }),
+    return SliverToBoxAdapter(
+      child: SizedBox(
+        height: 100,
+        child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: widget.specializationDataList!.length,
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  selectedIndex = index;
+                  setState(() {});
+                  context.read<HomeCubit>().emitDoctorsList(
+                      widget.specializationDataList![index]!.id!);
+                },
+                child: SpecializationItem(
+                  specializationsData: widget.specializationDataList![index]!,
+                  itemInex: index,
+                  selectedIndex: selectedIndex,
+                ),
+              );
+            }),
+      ),
     );
   }
 }

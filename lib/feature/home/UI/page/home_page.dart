@@ -18,22 +18,37 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SafeArea(
           child: BlocProvider(
-            create: (context) => HomeCubit(homeRepo: getIt())..emitspecializationState(),
+            create: (context) =>
+                HomeCubit(homeRepo: getIt())..emitspecializationState(),
             child: Container(
               margin: const EdgeInsets.fromLTRB(20, 16, 20, 25),
               width: double.infinity,
-              child: Column(
-                children: [
+              child: CustomScrollView(
+                slivers: [
                   const HomeTopBar(),
-                  verticalSpace(16),
+                  SliverToBoxAdapter(child: verticalSpace(16)),
                   const DoctorBlueContainer(),
-                  verticalSpace(16),
+                  SliverToBoxAdapter(child: verticalSpace(16)),
                   const SeeAllSpecialization(),
-                  verticalSpace(8),
+                  SliverToBoxAdapter(child: verticalSpace(8)),
                   const BlocBuilderSpecializationList(),
-                  verticalSpace(8),
-                  const BlocBuilderDoctorsList()
+                  SliverToBoxAdapter(child: verticalSpace(8)),
+ const BlocBuilderDoctorsList()
+
                 ],
+                // child: Column(
+                // children: [
+                //   const HomeTopBar(),
+                //   verticalSpace(16),
+                //   const DoctorBlueContainer(),
+                //   verticalSpace(16),
+                //   const SeeAllSpecialization(),
+                //   verticalSpace(8),
+                //   const BlocBuilderSpecializationList(),
+                //   verticalSpace(8),
+                //   const BlocBuilderDoctorsList()
+                // ],
+                // ),
               ),
             ),
           ),

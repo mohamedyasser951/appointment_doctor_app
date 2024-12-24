@@ -40,7 +40,7 @@ class LoginBlocListener extends StatelessWidget {
         } else if (state is SuccessLoginState) {
           saveUserToken(state.loginResponse.userData!.token);
           context.pop();
-          context.pushNamedAndRemoveUntil(AppRouteName.homePage);
+          context.pushNamedAndRemoveUntil(AppRouteName.mainLayoutPage);
         }
       },
       child: const SizedBox.shrink(),
