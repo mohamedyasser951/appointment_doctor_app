@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "353336981181",
+    "project_id": "docdoc-app-a45f2",
+    "storage_bucket": "docdoc-app-a45f2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353336981181:android:cf49516b467de323b329d4",
+        "android_client_info": {
+          "package_name": "com.example.appointment_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCha7-LUJx3UDXkgqayd06y1Ii9ddZ2rjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
