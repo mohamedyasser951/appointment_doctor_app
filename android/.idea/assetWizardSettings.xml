@@ -81,7 +81,7 @@
                                               <map>
                                                 <entry key="color" value="000000" />
                                                 <entry key="imagePath" value="D:\Flutter Projects\appointment_doctor_app\assets\images\logo.png" />
-                                                <entry key="scalingPercent" value="47" />
+                                                <entry key="scalingPercent" value="35" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -113,11 +113,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="generateLegacyIcon" value="false" />
-                                      <entry key="generatePlayStoreIcon" value="false" />
-                                      <entry key="generateRoundIcon" value="false" />
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="ffffff" />
                                       <entry key="generateWebpIcons" value="false" />
-                                      <entry key="outputName" value="android12logo" />
+                                      <entry key="outputName" value="ic_launcher_logo" />
                                     </map>
                                   </option>
                                 </PersistentState>

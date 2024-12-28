@@ -1,5 +1,6 @@
 import 'package:appointment_app/core/constants/image_assets.dart';
 import 'package:appointment_app/core/theme/colors.dart';
+import 'package:appointment_app/feature/Chat/Ui/chat_page.dart';
 import 'package:appointment_app/feature/Home/UI/page/home_page.dart';
 import 'package:appointment_app/feature/Profile/Ui/pages/profile_page.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class MainLayoutPageState extends State<MainLayoutPage> {
   int _selectedIndex = 0;
   List<Widget> pages = [
     const HomePage(),
-    const ProfilePage(),
+    const ChatPage(),
     const ProfilePage(),
     const ProfilePage()
   ];

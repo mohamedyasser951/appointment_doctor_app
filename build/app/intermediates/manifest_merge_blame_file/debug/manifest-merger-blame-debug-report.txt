@@ -53,7 +53,7 @@
 39-->[androidx.core:core:1.13.1] C:\Users\moham\.gradle\caches\transforms-3\eb175a205a3081c2bde0a5cc27a4c4f3\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 40        android:debuggable="true"
 41        android:extractNativeLibs="true"
-42        android:icon="@mipmap/ic_launcher"
+42        android:icon="@mipmap/ic_launcher_logo_foreground"
 43        android:label="Docdoc" >
 44        <activity
 45            android:name="com.example.appointment_app.MainActivity"

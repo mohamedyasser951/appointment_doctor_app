@@ -4,9 +4,11 @@ import 'package:appointment_app/core/helpers/extensions.dart';
 import 'package:appointment_app/core/helpers/storage_helper.dart';
 import 'package:appointment_app/doc_app.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await ScreenUtil.ensureScreenSize();
   setupGetIt();
   await checkUserIsLogin();
   runApp(const DocApp());
