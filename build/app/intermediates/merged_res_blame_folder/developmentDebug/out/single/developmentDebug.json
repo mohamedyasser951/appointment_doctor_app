@@ -1,0 +1,174 @@
+[
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xxxhdpi_android12logo_foreground.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xxxhdpi/android12logo_foreground.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-mdpi_ic_launcher_logo_foreground.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-mdpi/ic_launcher_logo_foreground.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-hdpi_ic_launcher_logo.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-hdpi/ic_launcher_logo.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-night-xxxhdpi_splash.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-night-xxxhdpi/splash.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-mdpi_splash.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-mdpi/splash.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xhdpi_ic_launcher_logo_foreground.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xhdpi/ic_launcher_logo_foreground.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xxhdpi_ic_launcher_logo_round.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xxhdpi/ic_launcher_logo_round.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-night-v21_background.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-night-v21/background.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xhdpi_android12logo_foreground.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xhdpi/android12logo_foreground.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-night-v21_launch_background.xml.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-night-v21/launch_background.xml"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-anydpi-v26_ic_launcher_logo_round.xml.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-anydpi-v26/ic_launcher_logo_round.xml"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-xxxhdpi_splash.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-xxxhdpi/splash.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-anydpi-v26_ic_launcher_logo.xml.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-anydpi-v26/ic_launcher_logo.xml"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xxxhdpi_ic_launcher_logo.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xxxhdpi/ic_launcher_logo.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-v21_launch_background.xml.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-v21/launch_background.xml"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-night-xhdpi_splash.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-night-xhdpi/splash.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-hdpi_splash.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-hdpi/splash.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-mdpi_android12logo_foreground.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-mdpi/android12logo_foreground.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-mdpi_ic_launcher_logo_round.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-mdpi/ic_launcher_logo_round.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable_android12logo_background.xml.flat",
+        "source": "com.example.appointment_app-main-23:/drawable/android12logo_background.xml"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-hdpi_ic_launcher_logo_foreground.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-hdpi/ic_launcher_logo_foreground.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-hdpi_ic_launcher_logo_round.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-hdpi/ic_launcher_logo_round.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xxhdpi_android12logo_foreground.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xxhdpi/android12logo_foreground.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xxhdpi_ic_launcher_logo_foreground.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xxhdpi/ic_launcher_logo_foreground.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xhdpi_ic_launcher_logo.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xhdpi/ic_launcher_logo.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-anydpi-v26_android12logo.xml.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-anydpi-v26/android12logo.xml"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-v21_background.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-v21/background.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-hdpi_android12logo_foreground.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-hdpi/android12logo_foreground.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-xhdpi_splash.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-xhdpi/splash.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xxxhdpi_ic_launcher_logo_round.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xxxhdpi/ic_launcher_logo_round.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-night-mdpi_splash.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-night-mdpi/splash.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xxxhdpi_ic_launcher_logo_foreground.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xxxhdpi/ic_launcher_logo_foreground.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xxhdpi_ic_launcher_logo.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xxhdpi/ic_launcher_logo.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-night-xxhdpi_splash.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-night-xxhdpi/splash.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-night-hdpi_splash.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-night-hdpi/splash.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-xhdpi_ic_launcher_logo_round.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-xhdpi/ic_launcher_logo_round.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/drawable-xxhdpi_splash.png.flat",
+        "source": "com.example.appointment_app-main-23:/drawable-xxhdpi/splash.png"
+    },
+    {
+        "merged": "com.example.appointment_app-merged_res-28:/mipmap-mdpi_ic_launcher_logo.png.flat",
+        "source": "com.example.appointment_app-main-23:/mipmap-mdpi/ic_launcher_logo.png"
+    }
+]

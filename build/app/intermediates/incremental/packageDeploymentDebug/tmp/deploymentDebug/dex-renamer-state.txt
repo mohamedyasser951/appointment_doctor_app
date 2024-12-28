@@ -1,0 +1,16 @@
+#Sat Dec 28 14:28:23 EET 2024
+base.0=D\:\\Flutter Projects\\appointment_doctor_app\\build\\app\\intermediates\\dex\\deploymentDebug\\mergeExtDexDeploymentDebug\\classes.dex
+base.1=D\:\\Flutter Projects\\appointment_doctor_app\\build\\app\\intermediates\\dex\\deploymentDebug\\mergeLibDexDeploymentDebug\\0\\classes.dex
+base.2=D\:\\Flutter Projects\\appointment_doctor_app\\build\\app\\intermediates\\dex\\deploymentDebug\\mergeProjectDexDeploymentDebug\\0\\classes.dex
+base.3=D\:\\Flutter Projects\\appointment_doctor_app\\build\\app\\intermediates\\dex\\deploymentDebug\\mergeProjectDexDeploymentDebug\\15\\classes.dex
+base.4=D\:\\Flutter Projects\\appointment_doctor_app\\build\\app\\intermediates\\dex\\deploymentDebug\\mergeProjectDexDeploymentDebug\\1\\classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=0/classes.dex
+path.3=15/classes.dex
+path.4=1/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex
+renamed.3=classes4.dex
+renamed.4=classes5.dex
