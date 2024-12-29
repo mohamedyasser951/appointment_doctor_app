@@ -9,11 +9,13 @@ class CustomeTextField extends StatelessWidget {
   final Widget? suffixIcon;
   final bool? obSecureText;
   final String? Function(String?)? validator;
+  final TextInputType? textInputType;
   const CustomeTextField(
       {super.key,
       required this.controller,
       required this.hintText,
       this.isPassword = false,
+      this.textInputType,
       this.suffixIcon,
       this.obSecureText,
       required this.validator});
@@ -24,6 +26,7 @@ class CustomeTextField extends StatelessWidget {
       // autovalidateMode: AutovalidateMode.always,
       obscureText: obSecureText ?? false,
       // autocorrect: !isPassword,
+      keyboardType: textInputType ?? TextInputType.text,
       controller: controller,
       validator: validator,
       decoration: InputDecoration(

@@ -27,7 +27,7 @@ class DoctorsItem extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 image: const DecorationImage(
                     image: AssetImage(
-                      ImageAsset.imagesDoctorsDoctor1,
+                      ImageAsset.imagesDoctorsDocot4,
                     ),
                     fit: BoxFit.cover),
                 color: ColorManger.primaryColor),
@@ -46,7 +46,7 @@ class DoctorsItem extends StatelessWidget {
                 verticalSpace(6),
                 Text(
                   "${doctor.degree} || ${doctor.phone}",
-                  style: TextStyles.font14RegularBlue,
+                  style: TextStyles.font14RegularGrey,
                 ),
                 verticalSpace(6),
                 Text(

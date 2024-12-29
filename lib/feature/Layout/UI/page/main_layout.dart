@@ -19,7 +19,7 @@ class MainLayoutPageState extends State<MainLayoutPage> {
   List<Widget> pages = [
     const HomePage(),
     const ChatPage(),
-    const ProfilePage(),
+    const ChatPage(),
     const ProfilePage()
   ];
   void _onItemTapped(int index) {
@@ -40,6 +40,7 @@ class MainLayoutPageState extends State<MainLayoutPage> {
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
         backgroundColor: ColorManger.primaryColor,
+        elevation: 10,
         onPressed: () {
           // Handle the floating action button press
         },
@@ -53,8 +54,8 @@ class MainLayoutPageState extends State<MainLayoutPage> {
         shape: const CircularNotchedRectangle(),
         notchMargin: 5.0,
         child: BottomNavigationBar(
-          backgroundColor: Colors.blueAccent,
-          elevation: 0.0,
+          backgroundColor: ColorManger.seconderyColor,
+          elevation: 10.0,
           type: BottomNavigationBarType.fixed,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
@@ -69,8 +70,11 @@ class MainLayoutPageState extends State<MainLayoutPage> {
               icon: SvgPicture.asset(ImageAsset.svgsBottomNavCalendar),
               label: 'favorite',
             ),
-            const BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                ImageAsset.svgsProfileSetting,
+                color: Colors.black,
+              ),
               label: 'Settings',
             ),
           ],

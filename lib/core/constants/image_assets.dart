@@ -66,6 +66,22 @@ class ImageAsset {
   /// assets/svgs/docdoc_logo.svg
   static const String svgsDocdocLogo = "assets/svgs/docdoc_logo.svg";
 
+  /// Assets for svgsProfileLanguageSquare
+  /// assets/svgs/Profile/language-square.svg
+  static const String svgsProfileLanguageSquare = "assets/svgs/Profile/language-square.svg";
+
+  /// Assets for svgsProfileLock
+  /// assets/svgs/Profile/lock.svg
+  static const String svgsProfileLock = "assets/svgs/Profile/lock.svg";
+
+  /// Assets for svgsProfileLogout
+  /// assets/svgs/Profile/logout.svg
+  static const String svgsProfileLogout = "assets/svgs/Profile/logout.svg";
+
+  /// Assets for svgsProfileMessageQuestion
+  /// assets/svgs/Profile/message-question.svg
+  static const String svgsProfileMessageQuestion = "assets/svgs/Profile/message-question.svg";
+
   /// Assets for svgsProfilePersonalcard
   /// assets/svgs/Profile/personalcard.svg
   static const String svgsProfilePersonalcard = "assets/svgs/Profile/personalcard.svg";

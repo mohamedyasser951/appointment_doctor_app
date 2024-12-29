@@ -25,7 +25,7 @@ class BlocBuilderDoctorsList extends StatelessWidget {
             );
           },
           orElse: () {
-            return SliverToBoxAdapter(child: const SizedBox.shrink());
+            return const SliverToBoxAdapter(child: SizedBox.shrink());
           },
         );
       },

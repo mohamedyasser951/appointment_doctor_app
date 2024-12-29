@@ -2,6 +2,12 @@
 <resources>
     <color name="ic_launcher_logo_background">#FFFFFF</color>
     <string name="app_name" translatable="false">Docdoc Deployment</string>
+    <string name="gcm_defaultSenderId" translatable="false">353336981181</string>
+    <string name="google_api_key" translatable="false">AIzaSyCha7-LUJx3UDXkgqayd06y1Ii9ddZ2rjw</string>
+    <string name="google_app_id" translatable="false">1:353336981181:android:cf49516b467de323b329d4</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCha7-LUJx3UDXkgqayd06y1Ii9ddZ2rjw</string>
+    <string name="google_storage_bucket" translatable="false">docdoc-app-a45f2.firebasestorage.app</string>
+    <string name="project_id" translatable="false">docdoc-app-a45f2</string>
     <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
         
         <item name="android:windowBackground">@drawable/launch_background</item>

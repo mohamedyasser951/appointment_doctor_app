@@ -26,29 +26,15 @@ class HomePage extends StatelessWidget {
               child: CustomScrollView(
                 slivers: [
                   const HomeTopBar(),
-                  SliverToBoxAdapter(child: verticalSpace(16)),
+                  SliverToBoxAdapter(child: verticalSpace(4)),
                   const DoctorBlueContainer(),
-                  SliverToBoxAdapter(child: verticalSpace(16)),
+                  SliverToBoxAdapter(child: verticalSpace(8)),
                   const SeeAllSpecialization(),
-                  SliverToBoxAdapter(child: verticalSpace(8)),
+                  SliverToBoxAdapter(child: verticalSpace(6)),
                   const BlocBuilderSpecializationList(),
-                  SliverToBoxAdapter(child: verticalSpace(8)),
- const BlocBuilderDoctorsList()
-
+                  SliverToBoxAdapter(child: verticalSpace(6)),
+                  const BlocBuilderDoctorsList()
                 ],
-                // child: Column(
-                // children: [
-                //   const HomeTopBar(),
-                //   verticalSpace(16),
-                //   const DoctorBlueContainer(),
-                //   verticalSpace(16),
-                //   const SeeAllSpecialization(),
-                //   verticalSpace(8),
-                //   const BlocBuilderSpecializationList(),
-                //   verticalSpace(8),
-                //   const BlocBuilderDoctorsList()
-                // ],
-                // ),
               ),
             ),
           ),

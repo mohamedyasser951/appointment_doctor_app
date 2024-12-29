@@ -9,18 +9,13 @@ class DoctorsBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverFillRemaining(
-      // hasScrollBody: false,
-      // fillOverscroll: true,
-
-      child: ListView.builder(
-          physics: const NeverScrollableScrollPhysics(),
-          itemCount: doctors!.length,
-          itemBuilder: (context, index) {
-            return DoctorsItem(
-              doctor: doctors![index],
-            );
-          }),
-    );
+    return SliverList.separated(
+        separatorBuilder: (context, index) => const Divider(),
+        itemCount: doctors!.length,
+        itemBuilder: (context, index) {
+          return DoctorsItem(
+            doctor: doctors![index],
+          );
+        });
   }
 }

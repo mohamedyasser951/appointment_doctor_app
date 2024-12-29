@@ -1,9 +1,9 @@
+import 'package:appointment_app/core/constants/image_assets.dart';
 import 'package:appointment_app/core/helpers/spacing.dart';
 import 'package:appointment_app/core/theme/colors.dart';
-import 'package:appointment_app/core/theme/text_styles.dart';
 import 'package:appointment_app/feature/Home/Data/models/specializations_response_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SpecializationItem extends StatelessWidget {
   final SpecializationsData specializationsData;
@@ -22,30 +22,39 @@ class SpecializationItem extends StatelessWidget {
       child: Column(
         children: [
           selectedIndex == itemInex
-              ? Container(
-                  height: 65.h,
-                  width: 65.w,
-                  decoration: const BoxDecoration(
-                    color: ColorManger.darkBlue,
-                    shape: BoxShape.circle,
-                  ),
-                  child: const CircleAvatar(
-                    radius: 28,
-                    backgroundColor: ColorManger.darkBlue,
-                  ),
+              ? Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    const CircleAvatar(
+                      radius: 29,
+                      backgroundColor: ColorManger.darkBlue,
+                    ),
+                    CircleAvatar(
+                      radius: 28,
+                      backgroundColor: ColorManger.lightBlueColor,
+                      child: SvgPicture.asset(
+                        ImageAsset.svgsSpecialityDentistry,
+                        fit: BoxFit.scaleDown,
+                      ),
+                    ),
+                  ],
                 )
-              : const CircleAvatar(
+              : CircleAvatar(
                   radius: 28,
                   backgroundColor: ColorManger.lightBlueColor,
+                  child: SvgPicture.asset(
+                    ImageAsset.svgsSpecialityDentistry,
+                    fit: BoxFit.scaleDown,
+                  ),
                 ),
-          verticalSpace(8),
+          verticalSpace(6),
           Text(specializationsData.name ?? "name",
               style: selectedIndex == itemInex
-                  ? TextStyles.font14RegularBlue.copyWith(
-                      color: ColorManger.darkBlue,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold)
-                  : TextStyles.font11RegularMoreGrey),
+                  ? Theme.of(context)
+                      .textTheme
+                      .bodyMedium!
+                      .copyWith(fontWeight: FontWeight.w500)
+                  : Theme.of(context).textTheme.bodyMedium),
         ],
       ),
     );
