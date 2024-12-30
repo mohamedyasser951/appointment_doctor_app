@@ -21,7 +21,7 @@ class DocApp extends StatelessWidget {
         // initialRoute: AppStringConstants.userLogedIn
         //     ? AppRouteName.mainLayoutPage
         //     : AppRouteName.loginPage,
-        initialRoute: AppRouteName.signUpPage,
+        initialRoute: AppRouteName.loginPage,
         // home: const ProfilePage(),
       ),
     );

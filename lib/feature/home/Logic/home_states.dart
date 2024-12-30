@@ -1,3 +1,4 @@
+import 'package:appointment_app/core/networking/api_error_model.dart';
 import 'package:appointment_app/feature/Home/Data/models/specializations_response_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -12,7 +13,7 @@ class HomeStates<T> with _$HomeStates<T> {
   const factory HomeStates.specializationsSuccess(
           List<SpecializationsData?>? specializationDataList) =
       specializationsSuccess;
-  const factory HomeStates.specializationsError({required String error}) =
+  const factory HomeStates.specializationsError({required ApiErrorModel apiErrorModel}) =
       SpecializationsError;
 
 

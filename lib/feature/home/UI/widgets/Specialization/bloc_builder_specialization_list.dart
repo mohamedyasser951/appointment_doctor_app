@@ -18,21 +18,20 @@ class BlocBuilderSpecializationList extends StatelessWidget {
           current is SpecializationsError,
       builder: (context, state) {
         return state.maybeWhen(specializationsLoading: () {
-          return SliverToBoxAdapter(
-            child: const Center(
+          return const SliverToBoxAdapter(
+            child: Center(
               child: CircularProgressIndicator.adaptive(),
             ),
           );
-        }, specializationsError: (error) {
+        }, specializationsError: (apiErrorModel) {
           return SliverToBoxAdapter(
             child: Center(
-              child: Text(error),
+              child: Text(apiErrorModel.message),
             ),
           );
         }, specializationsSuccess: (specializationsList) {
           return SpecializationList(
               specializationDataList: specializationsList);
-     
         }, orElse: () {
           return SliverToBoxAdapter(
             child: Container(

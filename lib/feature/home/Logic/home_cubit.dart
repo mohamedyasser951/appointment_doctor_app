@@ -22,8 +22,8 @@ class HomeCubit extends Cubit<HomeStates> {
           specializationsDataList = specializations.specializationDataList;
           emitDoctorsList(specializationsDataList!.first!.id!);
         },
-        failure: (errorHandler) => emit(HomeStates.specializationsError(
-            error: errorHandler.apiErrorModel.message)));
+        failure: (apiErrorModel) => emit(HomeStates.specializationsError(
+            apiErrorModel: apiErrorModel)));
   }
 
   emitDoctorsList(int specialistIndex) {

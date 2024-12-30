@@ -24,22 +24,18 @@ class SignupCubit extends Cubit<SignupStates> {
         gender: 0,
         password: passwordController.text.trim(),
         passwordConfirmation: confirmPasswordController.text.trim());
+
     final response =
         await signupRepo.signUp(signupRequestBody: signupRequestBody);
+        
     response.when(
       success: (signupResponse) {
         emit(SignupStates.success(signupResponse));
       },
-      failure: (errorHandler) {
+      failure: (apiErrorModel) {
         emit(SignupStates.error(
-            errorMessage: errorHandler.apiErrorModel.message));
+            apiErrorModel: apiErrorModel));
       },
     );
-  }
-
-  void validateAndSignUp() {
-    if (formKey.currentState!.validate()) {
-      emitSignUpState();
-    }
   }
 }

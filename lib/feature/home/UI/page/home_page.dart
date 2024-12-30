@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
         body: SafeArea(
           child: BlocProvider(
             create: (context) =>
-                HomeCubit(homeRepo: getIt())..emitspecializationState(),
+                HomeCubit(homeRepo: getIt()),
             child: Container(
               margin: const EdgeInsets.fromLTRB(20, 16, 20, 25),
               width: double.infinity,

@@ -37,9 +37,7 @@ class SignUpPage extends StatelessWidget {
             verticalSpace(10),
             CustomeButton(
                 text: "Create Account",
-                onPressed: () {
-                  context.read<SignupCubit>().validateAndSignUp();
-                }),
+                onPressed: () => validateAndSignUp(context)),
             verticalSpace(10),
             const TermAndConditionsWidget(),
             verticalSpace(30),
@@ -49,5 +47,10 @@ class SignUpPage extends StatelessWidget {
         ),
       ),
     ));
+  }
+  void validateAndSignUp(BuildContext context){
+     if ( context.read<SignupCubit>().formKey.currentState!.validate()) {
+      context.read<SignupCubit>().emitSignUpState();
+    }
   }
 }

@@ -18,7 +18,7 @@ class SignupCubitListener extends StatelessWidget {
       listenWhen: (previous, current) =>
           current is LoadingSignUpState ||
           current is SuccessSignUpState ||
-          current is SuccessSignUpState,
+          current is ErrorSignUpState,
       listener: (context, state) {
         if (state is LoadingSignUpState) {
           showDialog(
@@ -34,7 +34,7 @@ class SignupCubitListener extends StatelessWidget {
           context.pop();
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text(state.errorMessage),
+              content: Text(state.apiErrorModel.getAllErrorMessages()),
             ),
           );
         } else if (state is SuccessSignUpState) {

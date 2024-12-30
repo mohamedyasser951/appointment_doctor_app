@@ -1,4 +1,4 @@
-#Sat Dec 28 22:45:35 EET 2024
+#Mon Dec 30 00:35:42 EET 2024
 base.0=D\:\\Flutter Projects\\appointment_doctor_app\\build\\app\\intermediates\\dex\\deploymentRelease\\minifyDeploymentReleaseWithR8\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
