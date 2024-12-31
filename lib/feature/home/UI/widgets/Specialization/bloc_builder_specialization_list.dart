@@ -33,12 +33,7 @@ class BlocBuilderSpecializationList extends StatelessWidget {
           return SpecializationList(
               specializationDataList: specializationsList);
         }, orElse: () {
-          return SliverToBoxAdapter(
-            child: Container(
-              height: 500,
-              color: Colors.amber,
-            ),
-          );
+          return const SliverToBoxAdapter(child: SizedBox.shrink());
         });
       },
     );

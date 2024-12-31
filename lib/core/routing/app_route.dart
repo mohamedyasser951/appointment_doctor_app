@@ -4,7 +4,9 @@ import 'package:appointment_app/feature/Layout/UI/page/main_layout.dart';
 import 'package:appointment_app/feature/Login/UI/page/login_page.dart';
 import 'package:appointment_app/feature/Login/logic/LoginCubit/login_cubit.dart';
 import 'package:appointment_app/feature/Home/UI/page/home_page.dart';
-import 'package:appointment_app/feature/Profile/Ui/pages/profile_setting_page.dart';
+import 'package:appointment_app/feature/Profile/Ui/pages/ProfileSettings/faq_page.dart';
+import 'package:appointment_app/feature/Profile/Ui/pages/ProfileSettings/notifications_settings_page.dart';
+import 'package:appointment_app/feature/Profile/Ui/pages/ProfileSettings/profile_setting_page.dart';
 import 'package:appointment_app/feature/SignUp/Logic/SignUp%20Cubit/signup_cubit.dart';
 import 'package:appointment_app/feature/SignUp/UI/Page/sign_up_page.dart';
 import 'package:appointment_app/feature/onBoardingPage/page/on_boarding_page.dart';
@@ -42,13 +44,37 @@ class AppRoute {
         );
 
       case AppRouteName.profileSettingPage:
-        return MaterialPageRoute(
-          builder: (context) => const ProfileSettingPage(),
-        );
+        return createRouteWithAnimation(const ProfileSettingPage());
+
+      case AppRouteName.faqSettingPage:
+        return createRouteWithAnimation(FAQPage());
+
+      case AppRouteName.notificationSettingPage:
+        return createRouteWithAnimation(const NotificationSettingsPage());
+
       default:
         return MaterialPageRoute(
           builder: (context) => const MainLayoutPage(),
         );
     }
+  }
+
+  static Route createRouteWithAnimation(Widget page) {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => page,
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(1.0, 0.0);
+        const end = Offset.zero;
+        const curve = Curves.easeInOut;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(
+          position: animation.drive(tween),
+          child: child,
+        );
+      },
+    );
   }
 }

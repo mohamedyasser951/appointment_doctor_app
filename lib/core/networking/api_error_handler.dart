@@ -8,7 +8,8 @@ class ErrorHandler {
   static ApiErrorModel handle(dynamic error) {
     if (error is DioException) {
       return _handleError(error);
-    } else {
+    }
+     else {
       return ApiErrorModel(
           message: "An unexpected error occurred. Please try again.");
     }
@@ -33,7 +34,8 @@ ApiErrorModel _handleError(DioException error) {
           error.response?.statusCode != null &&
           error.response?.statusMessage != null) {
         return ApiErrorModel.fromJson(error.response!.data);
-      } else {
+      } 
+      else {
         return ApiErrorModel(
             message: "An unexpected error occurred. Please try again.");
       }
