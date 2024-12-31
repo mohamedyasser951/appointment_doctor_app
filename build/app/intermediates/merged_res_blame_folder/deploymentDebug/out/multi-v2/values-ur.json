@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.appointment_app-mergeDeploymentDebugResources-29:/values-ur/values-ur.xml",
+            "outputFile": "com.example.appointment_app-mergeDeploymentDebugResources-30:/values-ur/values-ur.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-3\\282de5ca2153796eece4664416432548\\transformed\\jetified-play-services-basement-18.3.0\\res\\values-ur\\values.xml",
+                    "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-3\\3aebd9d246d391e9e45dbd8c9b12821a\\transformed\\jetified-play-services-basement-18.3.0\\res\\values-ur\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-3\\d686d0c6ad358d93ea29ba52f786710c\\transformed\\core-1.13.1\\res\\values-ur\\values-ur.xml",
+                    "source": "C:\\Users\\moham\\.gradle\\caches\\transforms-3\\378ddeb148ee9a627c66de75aaa3721a\\transformed\\core-1.13.1\\res\\values-ur\\values-ur.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

@@ -1,10 +1,13 @@
+import 'dart:math';
+
+import 'package:appointment_app/core/constants/image_assets.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'specializations_response_model.g.dart';
 
-@JsonSerializable( )
-class SpecializationsResponseModel{
-   @JsonKey(name: 'data')
+@JsonSerializable()
+class SpecializationsResponseModel {
+  @JsonKey(name: 'data')
   List<SpecializationsData?>? specializationDataList;
 
   SpecializationsResponseModel({
@@ -26,6 +29,24 @@ class SpecializationsData {
 
   factory SpecializationsData.fromJson(Map<String, dynamic> json) =>
       _$SpecializationsDataFromJson(json);
+
+  static const Map<String, String> specialityImages = {
+    "Cardiology": ImageAsset.svgsSpecialityCardiologist,
+    "Dermatology": ImageAsset.svgsSpecialityHepatology,
+    "Neurology": ImageAsset.svgsSpecialityHistologist,
+    "Orthopedics": ImageAsset.svgsSpecialityEnt,
+    "Pediatrics": ImageAsset.svgsSpecialityPulmonary,
+    "Gynecology": ImageAsset.svgsSpecialityBaby,
+    "Ophthalmology": ImageAsset.svgsSpecialityOptometry,
+    "Urology": ImageAsset.svgsSpecialityIntestine,
+    "Gastroenterology": ImageAsset.svgsSpecialityKidneys,
+    "Psychiatry": ImageAsset.svgsSpecialityBrain,
+  };
+  static const String defaultImage = ImageAsset.svgsSpecialityDentistry;
+
+  String get image {
+    return specialityImages[name] ?? defaultImage;
+  }
 }
 
 @JsonSerializable()
@@ -62,6 +83,19 @@ class Doctors {
 
   factory Doctors.fromJson(Map<String, dynamic> json) =>
       _$DoctorsFromJson(json);
+
+  String get getRandowDoctorImage {
+    final random = Random();
+
+    List<String> doctorsImage = [
+      ImageAsset.imagesDoctorsDoctor1,
+      ImageAsset.imagesDoctorsDoctor2,
+      ImageAsset.imagesDoctorsDoctor3,
+      ImageAsset.imagesDoctorsDocot4,
+    ];
+
+    return doctorsImage[random.nextInt(doctorsImage.length)];
+  }
 }
 
 @JsonSerializable()

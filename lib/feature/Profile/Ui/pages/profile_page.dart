@@ -1,5 +1,7 @@
 import 'package:appointment_app/core/constants/image_assets.dart';
+import 'package:appointment_app/core/helpers/spacing.dart';
 import 'package:appointment_app/core/theme/colors.dart';
+import 'package:appointment_app/feature/Profile/Ui/Widgets/appointemnt_and_medical_buttons.dart';
 import 'package:appointment_app/feature/Profile/Ui/Widgets/profile_list_item.dart';
 import 'package:appointment_app/feature/Profile/Ui/Widgets/profile_top_bar.dart';
 import 'package:flutter/material.dart';
@@ -15,38 +17,12 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             children: [
               const ProfileTopBar(),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.2,
-                decoration: const BoxDecoration(
-                  color: ColorManger.primaryColor,
-                ),
-              ),
-
-              Container(
-                height: 120,
-                decoration: const BoxDecoration(
-                    color: Colors.amberAccent,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10))),
-              ),
-              // const Stack(
-              //   clipBehavior: Clip.none,
-              //   alignment: Alignment.center,
-              //   children: [
-              //     // Container(
-              //     //   height: 150,
-              //     //   decoration: const BoxDecoration(
-              //     //     color: ColorManger.primaryColor,
-              //     //   ),
-              //     // ),
-              //     UserAvatarAndName(),
-              //   ],
-              // ),
-              // verticalSpace(80),
-              // const AppointemntAndMedicalButtons(),
-              // verticalSpace(20),
-              // const PersonalInformationAndPayment(),
+              verticalSpace(10),
+              const UserAvatarAndName(),
+              verticalSpace(10),
+              const AppointemntAndMedicalButtons(),
+              verticalSpace(18),
+              const PersonalInformationAndPayment(),
             ],
           ),
         ));

@@ -1,5 +1,7 @@
 import 'package:appointment_app/core/constants/image_assets.dart';
 import 'package:appointment_app/core/helpers/extensions.dart';
+import 'package:appointment_app/core/helpers/storage_helper.dart';
+import 'package:appointment_app/core/routing/route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -63,6 +65,9 @@ class ProfileSettingPage extends StatelessWidget {
                   trailing: const Icon(Icons.arrow_forward_ios_outlined),
                 ),
                 ListTile(
+                  onTap: () {
+                    showLogoutDialog(context);
+                  },
                   leading: SvgPicture.asset(ImageAsset.svgsProfileLogout),
                   title: Text(
                     "Logout",
@@ -78,6 +83,35 @@ class ProfileSettingPage extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  void showLogoutDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Logout'),
+          content: const Text('Are you sure you want to logout?'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                context.pop();
+              },
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () {
+                StorageHelper.clearAllSecuredData();
+                context.pop();
+                Navigator.of(context).pop();
+                context.pushReplacementNamed(AppRouteName.loginPage);
+              },
+              child: const Text('Logout'),
+            ),
+          ],
+        );
+      },
     );
   }
 }

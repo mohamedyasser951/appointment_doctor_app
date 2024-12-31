@@ -1,4 +1,3 @@
-import 'package:appointment_app/core/constants/image_assets.dart';
 import 'package:appointment_app/core/helpers/spacing.dart';
 import 'package:appointment_app/core/theme/colors.dart';
 import 'package:appointment_app/feature/Home/Data/models/specializations_response_model.dart';
@@ -33,7 +32,7 @@ class SpecializationItem extends StatelessWidget {
                       radius: 28,
                       backgroundColor: ColorManger.lightBlueColor,
                       child: SvgPicture.asset(
-                        ImageAsset.svgsSpecialityDentistry,
+                        specializationsData.image,
                         fit: BoxFit.scaleDown,
                       ),
                     ),
@@ -43,7 +42,7 @@ class SpecializationItem extends StatelessWidget {
                   radius: 28,
                   backgroundColor: ColorManger.lightBlueColor,
                   child: SvgPicture.asset(
-                    ImageAsset.svgsSpecialityDentistry,
+                    specializationsData.image,
                     fit: BoxFit.scaleDown,
                   ),
                 ),
