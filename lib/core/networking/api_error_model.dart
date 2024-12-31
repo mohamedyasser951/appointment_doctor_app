@@ -20,7 +20,6 @@ class ApiErrorModel {
       final value = entry.value;
       return "${value.join(",")}";
     }).join("\n");
-    print(errorMessage);
     return errorMessage;
   }
 }
