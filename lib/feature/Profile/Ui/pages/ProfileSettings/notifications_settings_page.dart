@@ -1,3 +1,4 @@
+import 'package:appointment_app/core/helpers/extensions.dart';
 import 'package:flutter/material.dart';
 
 class NotificationSettingsPage extends StatefulWidget {
@@ -20,15 +21,16 @@ class NotificationSettingsPageState extends State<NotificationSettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
         elevation: 1,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new,),
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+          ),
           onPressed: () {
-            // Handle back button
+            context.pop();
           },
         ),
-        title:  Text(
+        title: Text(
           "Notification",
           style: Theme.of(context).textTheme.headlineSmall,
         ),

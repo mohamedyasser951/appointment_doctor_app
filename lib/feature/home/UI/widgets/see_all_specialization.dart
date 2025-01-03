@@ -1,4 +1,4 @@
-import 'package:appointment_app/core/theme/text_styles.dart';
+import 'package:appointment_app/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class SeeAllSpecialization extends StatelessWidget {
@@ -10,8 +10,15 @@ class SeeAllSpecialization extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text("Doctor Speciality", style: TextStyles.font18BoldDarkBlue),
-          Text("See all", style: TextStyles.font14RegularBlue),
+          Text("Doctor Speciality",
+              style: Theme.of(context).textTheme.bodyLarge),
+          Text(
+            "See all",
+            style: Theme.of(context)
+                .textTheme
+                .bodyMedium!
+                .copyWith(color: ColorManger.primaryColor),
+          ),
         ],
       ),
     );

@@ -4,6 +4,7 @@ import 'package:appointment_app/feature/Layout/UI/page/main_layout.dart';
 import 'package:appointment_app/feature/Login/UI/page/login_page.dart';
 import 'package:appointment_app/feature/Login/logic/LoginCubit/login_cubit.dart';
 import 'package:appointment_app/feature/Home/UI/page/home_page.dart';
+import 'package:appointment_app/feature/Profile/Ui/pages/PersonalInformation/personal_inforamtion_page.dart';
 import 'package:appointment_app/feature/Profile/Ui/pages/ProfileSettings/faq_page.dart';
 import 'package:appointment_app/feature/Profile/Ui/pages/ProfileSettings/notifications_settings_page.dart';
 import 'package:appointment_app/feature/Profile/Ui/pages/ProfileSettings/profile_setting_page.dart';
@@ -52,9 +53,12 @@ class AppRoute {
       case AppRouteName.notificationSettingPage:
         return createRouteWithAnimation(const NotificationSettingsPage());
 
+      case AppRouteName.personalInformationPage:
+        return createRouteWithAnimation(const PersonalInforamtionPage());
+
       default:
         return MaterialPageRoute(
-          builder: (context) => const MainLayoutPage(),
+          builder: (context) => const Scaffold(),
         );
     }
   }

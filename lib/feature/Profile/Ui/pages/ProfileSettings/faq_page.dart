@@ -1,43 +1,93 @@
+import 'package:appointment_app/core/helpers/extensions.dart';
 import 'package:flutter/material.dart';
 
 class FAQPage extends StatelessWidget {
   final List<Map<String, String>> faqs = [
     {
-      "question": "What should I expect during a doctor's appointment?",
+      "question": "Can I bring someone with me to my appointment?",
+      "answer": "Yes, you can bring a family member or friend for support."
+    },
+    {
+      "question": "What should I wear to my doctor's appointment?",
       "answer":
-          "During a doctor's appointment, you can expect to discuss your medical history, current symptoms or concerns, and any medications or treatments you are taking. The doctor will likely perform a physical exam and may order additional tests or procedures if necessary."
+          "Wear comfortable clothing that allows easy access for examination."
     },
     {
-      "question": "What should I bring to my doctor's appointment?",
-      "answer": "Bring your ID, insurance card, and a list of medications."
-    },
-    {
-      "question": "What if I need to cancel or reschedule my appointment?",
-      "answer": "Contact the doctor's office as soon as possible to reschedule."
-    },
-    {
-      "question": "How do I make an appointment with a doctor?",
+      "question": "Will the doctor share my medical information with others?",
       "answer":
-          "You can call the doctor's office or use their online booking system."
+          "Your medical information is confidential and will only be shared with your consent, except in cases required by law."
     },
     {
-      "question": "How early should I arrive for my doctor's appointment?",
+      "question": "What should I do if I feel nervous about my appointment?",
       "answer":
-          "It's best to arrive 10-15 minutes early to complete any paperwork."
+          "Write down your concerns beforehand and share them with the doctor to help ease your nerves."
     },
     {
-      "question": "How long will my doctor's appointment take?",
-      "answer": "Appointments typically last between 15 and 30 minutes."
+      "question": "Can I ask for a second opinion?",
+      "answer": "Yes, it’s your right to seek a second opinion if you wish."
     },
     {
-      "question": "How much will my doctor's appointment cost?",
-      "answer": "Costs vary based on your insurance and the type of visit."
-    },
-    {
-      "question": "What should I look for in a good doctor?",
+      "question": "How do I prepare for a specialist appointment?",
       "answer":
-          "Look for a doctor with good reviews, experience, and a style of care that fits your needs."
+          "Bring any relevant medical records, referral letters, and a list of symptoms or questions."
     },
+    {
+      "question": "What happens if I’m running late to my appointment?",
+      "answer":
+          "Call the doctor's office to inform them and check if they can still see you."
+    },
+    {
+      "question": "Will I get test results during the appointment?",
+      "answer":
+          "Some results may be available immediately, but others might take a few days to process."
+    },
+    {
+      "question": "What if I don’t understand the doctor’s explanations?",
+      "answer":
+          "Ask the doctor to explain further or provide written instructions for clarity."
+    },
+    {
+      "question": "How can I follow up after my appointment?",
+      "answer":
+          "Contact the office or use the patient portal to ask questions or schedule follow-ups."
+    },
+    {
+      "question": "What if I need assistance with transportation?",
+      "answer":
+          "Many clinics can provide information about local transportation services or options for patients."
+    },
+    {
+      "question": "Can I request a specific gender for my doctor?",
+      "answer":
+          "Yes, most offices will try to accommodate your preference if possible."
+    },
+    {
+      "question":
+          "What should I do if I have an emergency before my appointment?",
+      "answer":
+          "Call emergency services or visit the nearest emergency room immediately."
+    },
+    {
+      "question": "Will I need to fast before my appointment?",
+      "answer":
+          "Check with the doctor's office ahead of time, as some tests require fasting."
+    },
+    {
+      "question": "Can I bring my child to my appointment?",
+      "answer":
+          "It's best to check with the office beforehand, but many facilities are child-friendly."
+    },
+    {
+      "question":
+          "What should I do if I experience new symptoms after scheduling my appointment?",
+      "answer":
+          "Contact the doctor's office to inform them of any changes or new symptoms."
+    },
+    {
+      "question": "What payment methods are accepted for appointments?",
+      "answer":
+          "Most offices accept cash, credit cards, and insurance. Confirm with the office if you have questions."
+    }
   ];
 
   FAQPage({super.key});
@@ -46,17 +96,18 @@ class FAQPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
         elevation: 1,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+          ),
           onPressed: () {
-            // Handle back button
+            context.pop();
           },
         ),
-        title: const Text(
+        title: Text(
           "FAQ",
-          style: TextStyle(color: Colors.black),
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
         actions: [
           IconButton(
@@ -71,14 +122,21 @@ class FAQPage extends StatelessWidget {
         itemCount: faqs.length,
         itemBuilder: (context, index) {
           return ExpansionTile(
+            shape: Border.all(width: 0.0),
             title: Text(
               faqs[index]["question"]!,
-              style: const TextStyle(fontWeight: FontWeight.w500),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyLarge!
+                  .copyWith(fontWeight: FontWeight.bold),
             ),
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(faqs[index]["answer"]!),
+                child: Text(
+                  faqs[index]["answer"]!,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
               ),
             ],
           );

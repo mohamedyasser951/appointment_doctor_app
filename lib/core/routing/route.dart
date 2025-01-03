@@ -5,6 +5,7 @@ class AppRouteName {
   static const String homePage = "/homePage";
   static const String mainLayoutPage = "/mainLayout";
   static const String profileSettingPage = "/profileSettingPage";
+  static const String personalInformationPage = "/personalInformationPage";
   static const String faqSettingPage = "/faqSettingPage";
   static const String notificationSettingPage = "/notificationSettingPage";
 }

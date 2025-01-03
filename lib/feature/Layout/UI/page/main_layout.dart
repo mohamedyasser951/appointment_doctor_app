@@ -34,7 +34,6 @@ class MainLayoutPageState extends State<MainLayoutPage> {
 
   @override
   void initState() {
-    // getIt<HomeCubit>().emitspecializationState();
     super.initState();
   }
 
@@ -61,13 +60,11 @@ class MainLayoutPageState extends State<MainLayoutPage> {
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
-          color: Colors.white,
           height: 98.h,
           clipBehavior: Clip.antiAliasWithSaveLayer,
           shape: const CircularNotchedRectangle(),
           notchMargin: 5.0,
           child: BottomNavigationBar(
-            backgroundColor: ColorManger.seconderyColor,
             elevation: 10.0,
             type: BottomNavigationBarType.fixed,
             items: <BottomNavigationBarItem>[
@@ -78,6 +75,7 @@ class MainLayoutPageState extends State<MainLayoutPage> {
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(ImageAsset.svgsBottomNavMessageText),
                 label: 'Business',
+                
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(ImageAsset.svgsBottomNavCalendar),
@@ -94,8 +92,8 @@ class MainLayoutPageState extends State<MainLayoutPage> {
             currentIndex: _selectedIndex,
             showSelectedLabels: false,
             showUnselectedLabels: false,
-            selectedItemColor: Colors.white,
-            unselectedItemColor: ColorManger.darkBlue,
+            // selectedItemColor: Colors.white,
+            // unselectedItemColor: ColorManger.darkBlue,
             onTap: _onItemTapped,
           ),
         ),

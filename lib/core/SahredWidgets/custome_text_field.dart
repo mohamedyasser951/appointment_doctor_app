@@ -43,8 +43,7 @@ class CustomeTextField extends StatelessWidget {
             borderSide: const BorderSide(color: Colors.red),
             borderRadius: BorderRadius.circular(12)),
         hintText: hintText,
-        filled: true,
-        fillColor: ColorManger.seconderyColor,
+     
         suffixIcon: isPassword ? suffixIcon : null,
       ),
     );

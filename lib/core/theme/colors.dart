@@ -11,4 +11,11 @@ class ColorManger {
   static const Color moreGreyColor = Color(0xFF616161);
 
   static const Color lightGreyColor = Color(0xFFEDEDED);
+
+  //Dark Theme Colors
+  static const Color darkColor = Color(0xFF101720);
+  static const Color darkGreyColor = Color(0xFF171717);
+  static const Color nightColor = Color(0xFF121212);
+    static const Color oilBlackColor = Color(0xFF101720);
+
 }

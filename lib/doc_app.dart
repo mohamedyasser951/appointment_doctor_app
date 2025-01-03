@@ -1,7 +1,7 @@
 import 'package:appointment_app/core/constants/app_strings_constants.dart';
 import 'package:appointment_app/core/routing/app_route.dart';
 import 'package:appointment_app/core/routing/route.dart';
-import 'package:appointment_app/core/theme/colors.dart';
+import 'package:appointment_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,12 +14,12 @@ class DocApp extends StatelessWidget {
       designSize: const Size(375, 812),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primaryColor: ColorManger.primaryColor,
-          scaffoldBackgroundColor: Colors.white,
-        ),
+        themeAnimationCurve: Curves.easeInOut,
+        themeAnimationDuration: Durations.medium1,
+        theme: AppThemes.lightTheme,
+        darkTheme: AppThemes.darkTheme,
+        themeMode: ThemeMode.dark,
         onGenerateRoute: AppRoute.onGenerateRoute,
-      
         initialRoute: AppStringConstants.userLogedIn
             ? AppRouteName.mainLayoutPage
             : AppRouteName.loginPage,
