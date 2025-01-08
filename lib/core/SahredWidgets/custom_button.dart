@@ -4,13 +4,16 @@ import 'package:flutter/material.dart';
 class CustomeButton extends StatelessWidget {
   final String text;
   final void Function() onPressed;
-  const CustomeButton({super.key, required this.text, required this.onPressed});
+  final Color? btnColor;
+  const CustomeButton(
+      {super.key, this.btnColor, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(ColorManger.primaryColor),
+          backgroundColor:
+              WidgetStateProperty.all(btnColor ?? ColorManger.primaryColor),
           shape: WidgetStatePropertyAll(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))),
           tapTargetSize: MaterialTapTargetSize.shrinkWrap,

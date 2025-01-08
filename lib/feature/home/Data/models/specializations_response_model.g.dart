@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: unused_element
-
 part of 'specializations_response_model.dart';
 
 // **************************************************************************
@@ -54,9 +52,9 @@ Doctors _$DoctorsFromJson(Map<String, dynamic> json) => Doctors(
       city: json['city'] == null
           ? null
           : City.fromJson(json['city'] as Map<String, dynamic>),
-      appointPrice: (json['appointPrice'] as num?)?.toInt(),
-      startTime: json['startTime'] as String?,
-      endTime: json['endTime'] as String?,
+      appointPrice: (json['appoint_price'] as num?)?.toInt(),
+      startTime: json['start_time'] as String?,
+      endTime: json['end_time'] as String?,
     );
 
 Map<String, dynamic> _$DoctorsToJson(Doctors instance) => <String, dynamic>{
@@ -70,9 +68,9 @@ Map<String, dynamic> _$DoctorsToJson(Doctors instance) => <String, dynamic>{
       'description': instance.description,
       'degree': instance.degree,
       'city': instance.city,
-      'appointPrice': instance.appointPrice,
-      'startTime': instance.startTime,
-      'endTime': instance.endTime,
+      'appoint_price': instance.appointPrice,
+      'start_time': instance.startTime,
+      'end_time': instance.endTime,
     };
 
 City _$CityFromJson(Map<String, dynamic> json) => City(

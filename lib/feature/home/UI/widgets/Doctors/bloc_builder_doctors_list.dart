@@ -1,5 +1,5 @@
-import 'package:appointment_app/feature/Home/Logic/home_cubit.dart';
-import 'package:appointment_app/feature/Home/Logic/home_states.dart';
+import 'package:appointment_app/feature/Home/Logic/HomeCubit/home_cubit.dart';
+import 'package:appointment_app/feature/Home/Logic/HomeCubit/home_states.dart';
 import 'package:appointment_app/feature/Home/UI/widgets/Doctors/doctors_builder.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

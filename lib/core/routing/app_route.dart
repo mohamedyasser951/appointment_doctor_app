@@ -1,9 +1,14 @@
 import 'package:appointment_app/core/di/dependency_injection.dart';
 import 'package:appointment_app/core/routing/route.dart';
+import 'package:appointment_app/feature/Home/Data/models/specializations_response_model.dart';
+import 'package:appointment_app/feature/Home/Logic/AppointmentCubit/appointment_cubit.dart';
+import 'package:appointment_app/feature/Home/UI/page/doctors_details.dart';
+import 'package:appointment_app/feature/Home/UI/page/make_appointment_page.dart';
 import 'package:appointment_app/feature/Layout/UI/page/main_layout.dart';
 import 'package:appointment_app/feature/Login/UI/page/login_page.dart';
 import 'package:appointment_app/feature/Login/logic/LoginCubit/login_cubit.dart';
 import 'package:appointment_app/feature/Home/UI/page/home_page.dart';
+import 'package:appointment_app/feature/Profile/Ui/pages/Appointment/my_appointment.dart';
 import 'package:appointment_app/feature/Profile/Ui/pages/PersonalInformation/personal_inforamtion_page.dart';
 import 'package:appointment_app/feature/Profile/Ui/pages/ProfileSettings/faq_page.dart';
 import 'package:appointment_app/feature/Profile/Ui/pages/ProfileSettings/notifications_settings_page.dart';
@@ -43,6 +48,20 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (context) => const HomePage(),
         );
+      case AppRouteName.doctorDetailsPage:
+        return MaterialPageRoute(
+          builder: (context) => DoctorDetailsPage(
+            doctorDetails: settings.arguments as Doctors,
+          ),
+        );
+      case AppRouteName.myAppointmentPage:
+        return createRouteWithAnimation(BlocProvider(
+          create: (context) => getIt<AppointmentCubit>()..getAllAppointment(),
+          child: const MyAppointmentPage(),
+        ));
+
+      case AppRouteName.makeAppointmentPage:
+        return createRouteWithAnimation(const MakeAppointmentPage());
 
       case AppRouteName.profileSettingPage:
         return createRouteWithAnimation(const ProfileSettingPage());

@@ -61,8 +61,11 @@ class Doctors {
   String? description;
   String? degree;
   City? city;
+  @JsonKey(name: "appoint_price")
   int? appointPrice;
+  @JsonKey(name: "start_time")
   String? startTime;
+  @JsonKey(name: "end_time")
   String? endTime;
 
   Doctors({

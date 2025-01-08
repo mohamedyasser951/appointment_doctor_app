@@ -2,7 +2,7 @@ import 'package:appointment_app/core/constants/image_assets.dart';
 import 'package:appointment_app/core/di/dependency_injection.dart';
 import 'package:appointment_app/core/theme/colors.dart';
 import 'package:appointment_app/feature/Chat/Ui/chat_page.dart';
-import 'package:appointment_app/feature/Home/Logic/home_cubit.dart';
+import 'package:appointment_app/feature/Home/Logic/HomeCubit/home_cubit.dart';
 import 'package:appointment_app/feature/Home/UI/page/home_page.dart';
 import 'package:appointment_app/feature/Profile/Logic/ProfileCubit/profile_cubit.dart';
 import 'package:appointment_app/feature/Profile/Ui/pages/profile_page.dart';
@@ -75,7 +75,6 @@ class MainLayoutPageState extends State<MainLayoutPage> {
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(ImageAsset.svgsBottomNavMessageText),
                 label: 'Business',
-                
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(ImageAsset.svgsBottomNavCalendar),

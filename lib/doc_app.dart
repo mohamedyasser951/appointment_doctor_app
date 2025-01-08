@@ -18,7 +18,7 @@ class DocApp extends StatelessWidget {
         themeAnimationDuration: Durations.medium1,
         theme: AppThemes.lightTheme,
         darkTheme: AppThemes.darkTheme,
-        themeMode: ThemeMode.dark,
+        themeMode: ThemeMode.light,
         onGenerateRoute: AppRoute.onGenerateRoute,
         initialRoute: AppStringConstants.userLogedIn
             ? AppRouteName.mainLayoutPage

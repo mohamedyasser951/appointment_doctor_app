@@ -410,6 +410,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "linear_step_indicator",
+      "rootUri": "file:///C:/Users/moham/AppData/Local/Pub/Cache/hosted/pub.dev/linear_step_indicator-1.0.0+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///C:/Users/moham/AppData/Local/Pub/Cache/hosted/pub.dev/lints-3.0.0",
       "packageUri": "lib/",
@@ -758,7 +764,7 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-12-30T19:58:26.627427Z",
+  "generated": "2025-01-05T21:59:06.545075Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///C:/development/flutter_sdk",

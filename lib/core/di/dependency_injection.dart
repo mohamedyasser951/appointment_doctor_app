@@ -2,7 +2,8 @@ import 'package:appointment_app/core/networking/api_service.dart';
 import 'package:appointment_app/core/networking/dio_factory.dart';
 import 'package:appointment_app/feature/Home/Data/Api/home_api_service.dart';
 import 'package:appointment_app/feature/Home/Data/repository/home_repo.dart';
-import 'package:appointment_app/feature/Home/Logic/home_cubit.dart';
+import 'package:appointment_app/feature/Home/Logic/AppointmentCubit/appointment_cubit.dart';
+import 'package:appointment_app/feature/Home/Logic/HomeCubit/home_cubit.dart';
 import 'package:appointment_app/feature/Login/Data/repository/login_repo.dart';
 import 'package:appointment_app/feature/Login/logic/LoginCubit/login_cubit.dart';
 import 'package:appointment_app/feature/Profile/Data/api/profile_api_service.dart';
@@ -40,4 +41,8 @@ void setupGetIt() async {
       () => ProfileRepo(apiService: getIt()));
   getIt.registerLazySingleton<ProfileCubit>(
       () => ProfileCubit(profileRepo: getIt())..getUserProfile());
+
+  // Appointment Deature
+  getIt
+      .registerFactory<AppointmentCubit>(() => AppointmentCubit(repo: getIt()));
 }
