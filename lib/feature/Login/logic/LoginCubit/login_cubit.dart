@@ -12,6 +12,7 @@ class LoginCubit extends Cubit<LoginStates> {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   LoginCubit({required this.loginRepo}) : super(const LoginStates.initial());
+
   void emitLoadingStates() async {
     emit(const LoginStates.loading());
     LoginRequestBody loginRequestBody = LoginRequestBody(
@@ -27,4 +28,6 @@ class LoginCubit extends Cubit<LoginStates> {
       },
     );
   }
+
+  
 }

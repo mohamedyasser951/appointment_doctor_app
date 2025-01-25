@@ -1,14 +1,13 @@
 import 'package:appointment_app/core/constants/image_assets.dart';
 import 'package:appointment_app/core/di/dependency_injection.dart';
-import 'package:appointment_app/core/theme/colors.dart';
 import 'package:appointment_app/feature/Chat/Ui/chat_page.dart';
 import 'package:appointment_app/feature/Home/Logic/HomeCubit/home_cubit.dart';
 import 'package:appointment_app/feature/Home/UI/page/home_page.dart';
 import 'package:appointment_app/feature/Profile/Logic/ProfileCubit/profile_cubit.dart';
 import 'package:appointment_app/feature/Profile/Ui/pages/profile_page.dart';
+import 'package:appointment_app/feature/Search/Ui/page/serach_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MainLayoutPage extends StatefulWidget {
@@ -22,7 +21,7 @@ class MainLayoutPageState extends State<MainLayoutPage> {
   int _selectedIndex = 0;
   List<Widget> pages = [
     const HomePage(),
-    const ChatPage(),
+    const SearchPage(),
     const ChatPage(),
     const ProfilePage()
   ];
@@ -49,52 +48,49 @@ class MainLayoutPageState extends State<MainLayoutPage> {
       ],
       child: Scaffold(
         body: pages[_selectedIndex],
-        floatingActionButton: FloatingActionButton(
-          shape: const CircleBorder(),
-          backgroundColor: ColorManger.primaryColor,
-          elevation: 10,
-          onPressed: () {
-            // Handle the floating action button press
-          },
-          child: SvgPicture.asset(ImageAsset.svgsBottomNavSearch),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        bottomNavigationBar: BottomAppBar(
-          height: 98.h,
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          shape: const CircularNotchedRectangle(),
-          notchMargin: 5.0,
-          child: BottomNavigationBar(
-            elevation: 10.0,
-            type: BottomNavigationBarType.fixed,
-            items: <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(ImageAsset.svgsBottomNavHome),
-                label: 'Home',
+        // floatingActionButton: FloatingActionButton(
+        //   shape: const CircleBorder(),
+        //   backgroundColor: ColorManger.primaryColor,
+        //   elevation: 10,
+        //   onPressed: () {
+        //     // Handle the floating action button press
+        //   },
+        //   child: SvgPicture.asset(ImageAsset.svgsBottomNavSearch),
+        // ),
+        // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: BottomNavigationBar(
+          elevation: 10.0,
+          type: BottomNavigationBarType.fixed,
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(ImageAsset.svgsBottomNavHome),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                ImageAsset.svgsBottomNavSearch,
+                color: Colors.black,
               ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(ImageAsset.svgsBottomNavMessageText),
-                label: 'Business',
+              label: 'search',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(ImageAsset.svgsBottomNavCalendar),
+              label: 'favorite',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                ImageAsset.svgsProfileSetting,
+                color: Colors.black,
               ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(ImageAsset.svgsBottomNavCalendar),
-                label: 'favorite',
-              ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  ImageAsset.svgsProfileSetting,
-                  color: Colors.black,
-                ),
-                label: 'Settings',
-              ),
-            ],
-            currentIndex: _selectedIndex,
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            // selectedItemColor: Colors.white,
-            // unselectedItemColor: ColorManger.darkBlue,
-            onTap: _onItemTapped,
-          ),
+              label: 'Settings',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          // selectedItemColor: Colors.white,
+          // unselectedItemColor: ColorManger.darkBlue,
+          onTap: _onItemTapped,
         ),
       ),
     );

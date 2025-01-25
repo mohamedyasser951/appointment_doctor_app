@@ -9,6 +9,7 @@ class ChatPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         title: const Text("Message", style: TextStyle(color: Colors.black)),
         actions: [

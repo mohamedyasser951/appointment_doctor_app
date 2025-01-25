@@ -3,7 +3,7 @@ import 'package:appointment_app/core/routing/route.dart';
 import 'package:appointment_app/feature/Home/Data/models/specializations_response_model.dart';
 import 'package:appointment_app/feature/Home/Logic/AppointmentCubit/appointment_cubit.dart';
 import 'package:appointment_app/feature/Home/UI/page/doctors_details.dart';
-import 'package:appointment_app/feature/Home/UI/page/make_appointment_page.dart';
+import 'package:appointment_app/feature/Home/UI/page/BookAppointment/page/make_appointment_page.dart';
 import 'package:appointment_app/feature/Layout/UI/page/main_layout.dart';
 import 'package:appointment_app/feature/Login/UI/page/login_page.dart';
 import 'package:appointment_app/feature/Login/logic/LoginCubit/login_cubit.dart';

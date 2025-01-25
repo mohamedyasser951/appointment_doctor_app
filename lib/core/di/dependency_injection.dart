@@ -9,6 +9,9 @@ import 'package:appointment_app/feature/Login/logic/LoginCubit/login_cubit.dart'
 import 'package:appointment_app/feature/Profile/Data/api/profile_api_service.dart';
 import 'package:appointment_app/feature/Profile/Data/repository/profile_repo.dart';
 import 'package:appointment_app/feature/Profile/Logic/ProfileCubit/profile_cubit.dart';
+import 'package:appointment_app/feature/Search/Data/Api%20Service/search_api_service.dart';
+import 'package:appointment_app/feature/Search/Data/Repository/search_repo.dart';
+import 'package:appointment_app/feature/Search/Logic/Search%20Cubit/search_cubit.dart';
 import 'package:appointment_app/feature/SignUp/Data/repo/signup_repo.dart';
 import 'package:appointment_app/feature/SignUp/Data/service/api_signup_service.dart';
 import 'package:dio/dio.dart';
@@ -45,4 +48,12 @@ void setupGetIt() async {
   // Appointment Deature
   getIt
       .registerFactory<AppointmentCubit>(() => AppointmentCubit(repo: getIt()));
+
+  // Search Feature
+  getIt.registerLazySingleton<SearchApiService>(() => SearchApiService(dio));
+
+  getIt.registerLazySingleton<SearchRepo>(
+      () => SearchRepo(searchApiService: getIt()));
+
+  getIt.registerFactory<SearchCubit>(() => SearchCubit(searchRepo: getIt()));
 }

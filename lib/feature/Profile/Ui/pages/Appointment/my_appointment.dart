@@ -45,7 +45,7 @@ class AllApointmentBlocBuilder extends StatelessWidget {
       buildWhen: (previous, current) =>
           current is GetAllAppointmentsLoading ||
           current is GetAllAppointmentsSuccess ||
-          current is GetAllAppointmentsSuccess,
+          current is GetAllAppointmentsError,
       builder: (context, state) {
         return state.maybeWhen(getAllAppointmentsLoading: () {
           return const LoadingWidget();

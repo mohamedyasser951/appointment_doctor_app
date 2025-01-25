@@ -1,7 +1,6 @@
 import 'package:appointment_app/core/SahredWidgets/custom_button.dart';
 import 'package:appointment_app/core/SahredWidgets/custome_text_field.dart';
 import 'package:appointment_app/core/di/dependency_injection.dart';
-import 'package:appointment_app/core/helpers/app_regex.dart';
 import 'package:appointment_app/core/helpers/extensions.dart';
 import 'package:appointment_app/core/helpers/spacing.dart';
 import 'package:appointment_app/feature/Profile/Logic/ProfileCubit/profile_cubit.dart';
@@ -74,8 +73,7 @@ class PersonalInforamtionPage extends StatelessWidget {
                           textInputType: TextInputType.phone,
                           hintText: "Phone",
                           validator: (val) {
-                            if (val.isNullOrEmpty ||
-                                AppRegex.isPhoneNumberValid(val!)) {
+                            if (val.isNullOrEmpty) {
                               return "Please Enter Valid Phone number";
                             }
                             return null;

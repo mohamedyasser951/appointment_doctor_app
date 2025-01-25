@@ -12,13 +12,15 @@ class DoctorsBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverList.separated(
-        separatorBuilder: (context, index) => const Divider(),
+        separatorBuilder: (context, index) => const Divider(
+              thickness: 0.3,
+            ),
         itemCount: doctors!.length,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
               context.pushNamed(AppRouteName.doctorDetailsPage,
-                arguments: doctors![index]);
+                  arguments: doctors![index]);
             },
             child: DoctorsItem(
               doctor: doctors![index],

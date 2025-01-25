@@ -23,7 +23,7 @@ class PersonalInformationListener extends StatelessWidget {
           context.pop();
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text(state.errorModel.message),
+              content: Text(state.errorModel.getAllErrorMessages()),
               backgroundColor: CupertinoColors.destructiveRed,
             ),
           );

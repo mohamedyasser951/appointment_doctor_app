@@ -38,10 +38,11 @@ class ProfileCubit extends Cubit<ProfileStates> {
     final response =
         await profileRepo.updateUserPofile(updateProfileRequestBody);
     response.when(
-      success: (updateProfileResponseBody) => emit(
-          ProfileStates.updatePofileSuccessState(updateProfileResponseBody)),
+      success: (updateProfileResponseBody) {
+        emit(ProfileStates.updatePofileSuccessState(updateProfileResponseBody));
+      },
       failure: (errorModel) =>
-          emit(ProfileStates.getPofileErrorState(errorModel)),
+          emit(ProfileStates.updatePofileErrorState(errorModel)),
     );
   }
 

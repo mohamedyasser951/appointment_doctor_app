@@ -36,7 +36,7 @@ class _ProfileApiService implements ProfileApiService {
     )
         .compose(
           _dio.options,
-          '/user/profile',
+          'user/profile',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -71,7 +71,7 @@ class _ProfileApiService implements ProfileApiService {
     )
         .compose(
           _dio.options,
-          '/user/update',
+          'user/update',
           queryParameters: queryParameters,
           data: _data,
         )

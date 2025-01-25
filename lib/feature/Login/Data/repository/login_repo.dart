@@ -18,4 +18,13 @@ class LoginRepo {
       return ApiResult.failure(ErrorHandler.handle(error));
     }
   }
+
+  Future<ApiResult<LoginResponse>> logOut() async {
+    try {
+      final ressponse = await apiService.logOut();
+      return ApiResult.success(ressponse);
+    } catch (error) {
+      return ApiResult.failure(ErrorHandler.handle(error));
+    }
+  }
 }
