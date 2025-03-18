@@ -36,14 +36,19 @@ easy_date_timeline v1.1.3: Customizable date timeline widget.<br/>
 flutter_datetime_picker_plus v2.2.0: Intuitive date and time picker.<br/>
 chat_bubbles v1.6.0: UI components for doctor-patient chat.s.<br/>
 <br/>
-#State Management and API Integration
+<h2>State Management and API Integration</h2>
 State Management: The flutter_bloc package ensures effective state management, allowing the app to gracefully handle data from APIs, including loading, success, and error states.
 API Integration: The application leverages the HTTP package to interact with a backend API, retrieving real-time data for doctor profiles, appointments, chat messages, and user information.
 By combining robust functionality with a user-centric design, Dodoc empowers users to take control of their healthcare journey, fostering a more accessible and efficient patient and provider experience.
 <br/>
 <h2>Screenshots</h2>
-| Screenshot 1 | Screenshot 2 | Screenshot 3 | Screenshot 4 | 
-|--------------|--------------|--------------|--------------|
-| ![1739368346244](https://github.com/user-attachments/assets/13552e5c-5f0c-4fa9-a710-57c44b1ecb30) | ![1739368346012](https://github.com/user-attachments/assets/02c3f97a-74aa-4dcc-8c9f-f64a94fe4bfc) | ![1739368344862](https://github.com/user-attachments/assets/b9e0770a-f6bf-4b6d-ba31-ee66e0390593) | ![1739368345195](https://github.com/user-attachments/assets/3d09018d-e1c7-4fde-b845-b2d017a8d32c) 
+| Screenshot 1 | Screenshot 2 | Screenshot 3 |
+|--------------|--------------|--------------|
+| ![1739368346244](https://github.com/user-attachments/assets/13552e5c-5f0c-4fa9-a710-57c44b1ecb30) | ![1739368346012](https://github.com/user-attachments/assets/02c3f97a-74aa-4dcc-8c9f-f64a94fe4bfc) | ![1739368344862](https://github.com/user-attachments/assets/b9e0770a-f6bf-4b6d-ba31-ee66e0390593) |
+
+| Screenshot 4 | Screenshot 5 |              |
+|--------------|--------------|--------------|
+| ![1739368345195](https://github.com/user-attachments/assets/3d09018d-e1c7-4fde-b845-b2d017a8d32c) | ![1739368345875](https://github.com/user-attachments/assets/4928e07c-c38f-4558-8a0d-77f131ed2ab5) |              |
+
 
 
