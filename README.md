@@ -48,7 +48,7 @@ By combining robust functionality with a user-centric design, Dodoc empowers use
 
 | Screenshot 4 | Screenshot 5 |              |
 |--------------|--------------|--------------|
-| ![1739368345195](https://github.com/user-attachments/assets/3d09018d-e1c7-4fde-b845-b2d017a8d32c) | ![1739368345875](https://github.com/user-attachments/assets/4928e07c-c38f-4558-8a0d-77f131ed2ab5) |              |
+| ![1739368345195](https://github.com/user-attachments/assets/3d09018d-e1c7-4fde-b845-b2d017a8d32c) | ![1739368345875](https://github.com/user-attachments/assets/4928e07c-c38f-4558-8a0d-77f131ed2ab5) |            |
 
 
 
